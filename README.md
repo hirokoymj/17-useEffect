@@ -5,7 +5,7 @@
 - `useEffect(setup, dependencies?)`
 - useEffect is a React Hook that lets you synchronize a component with an external system.
 
-## When does useEffect call in React?
+## When is useEffect called in React?
 The `useEffect` Hook in React is called based on its dependency array:
 
 **No dependency array:**
