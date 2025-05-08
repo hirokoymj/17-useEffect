@@ -5,6 +5,20 @@
 - `useEffect(setup, dependencies?)`
 - useEffect is a React Hook that lets you synchronize a component with an external system.
 
+## When does useEffect calls in React?
+The `useEffect` Hook in React is called based on its dependency array:
+
+**No dependency array:**
+`useEffect` runs after every render, including the initial render and subsequent updates.
+
+**Empty dependency array ([]):**
+useEffect runs only once after the initial render, similar to `componentDidMount` in class components.
+
+**Dependency array with values ([value1, value2]):**
+`useEffect` runs after the initial render and whenever any of the values in the dependency array change.
+It is important to note that useEffect is always called at least once, after the initial render of the component. If strict mode is enabled, React will run an extra setup + cleanup cycle in development to help find issues in the component.
+
+
 **My Effect runs twice when the component mounts**:
 
 - When Strict Mode is on, in development, React runs setup and cleanup one extra time before the actual setup.
